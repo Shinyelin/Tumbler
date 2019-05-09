@@ -5,4 +5,7 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="title_activity_bottom1">Bottom1Activity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
