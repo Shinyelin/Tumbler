@@ -44,7 +44,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
+
         mTextMessage = findViewById(R.id.message);
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.frame_layout, menu1Fragment).commitAllowingStateLoss();
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
