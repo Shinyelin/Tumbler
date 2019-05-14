@@ -113,7 +113,7 @@ public class Member extends Info {
 
                             Toast.LENGTH_SHORT).show();
 
-                } else if (Tmajor.length() <2) {
+                } else if (Tmajor.length() <1) {
 
                     Toast.makeText(getApplicationContext(), "학과이름을 정확히 입력해주세요.",
 
