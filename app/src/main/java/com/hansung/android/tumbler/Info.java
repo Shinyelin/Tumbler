@@ -10,9 +10,7 @@ import android.widget.Toast;
 
 
 /**
-
  * Created by 박성균 on 2015-05-30.
-
  */
 
 public class Info extends AppCompatActivity {
@@ -175,5 +173,3 @@ public class Info extends AppCompatActivity {
 
 
 }
-
-

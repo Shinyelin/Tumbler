@@ -8,7 +8,8 @@
 
     android:layout_height="match_parent"
 
-    android:background="#ffffff">
+    android:background="#ffffff"
+    android:layout_gravity="center">
 
     <LinearLayout
 
@@ -18,11 +19,11 @@
 
         <ImageView
 
-            android:layout_width="match_parent"
+            android:layout_width="130dp"
 
-            android:layout_height="170dp"
+            android:layout_height="130dp"
 
-            android:src="@drawable/logo"/>
+            android:src="@drawable/logo" />
 
     </LinearLayout>
 
@@ -140,15 +141,15 @@
 
             <TextView
 
-                android:text="학과 : "
+                android:text="성별 : "
 
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <EditText
 
                 android:id="@+id/major"
 
-                android:hint="학과를 입력하세요."
+                android:hint="성별을 입력하세요."
 
                 android:textSize="15dp"
 
@@ -169,7 +170,7 @@
 
         android:layout_height="wrap_content">
 
-        <ImageButton
+        <Button
 
             android:id="@+id/join"
 
@@ -179,9 +180,7 @@
 
             android:layout_height="wrap_content"
 
-            android:src="@drawable/member"
-
-            android:scaleType="centerCrop"
+            android:text="JOIN"
 
             android:padding="0sp"/>
 
@@ -189,32 +188,29 @@
 
     <LinearLayout
 
-        android:layout_marginBottom="0dp"
-
-        android:orientation="vertical"
+        android:layout_gravity="bottom"
 
         android:layout_width="match_parent"
 
         android:layout_height="wrap_content"
-
-        android:layout_gravity="center_horizontal">
+        android:gravity="center">
 
         <ImageView
 
 
+            android:id="@+id/bottomlogo"
+
+            android:layout_width="280dp"
+
+            android:layout_height="280dp"
+
+            android:padding="0sp"
 
 
-            android:id="@+id/botm"
+            android:src="@drawable/botm" />
 
-            android:src="@drawable/botm"
 
-            android:layout_width="match_parent"
 
-            android:layout_height="wrap_content"
-
-            android:scaleType="centerCrop"
-
-            android:padding="0sp"/>
 
 
 
@@ -222,5 +218,3 @@
     </LinearLayout>
 
 </LinearLayout>
-
-
