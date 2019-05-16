@@ -65,7 +65,7 @@
 
             <TextView
 
-                android:text="비밀번호 : "
+                android:text="몸무게 : "
 
                 android:textSize="20dp"/>
 
@@ -73,11 +73,11 @@
 
                 android:id="@+id/password"
 
-                android:hint="비밀번호를 입력하세요."
+                android:hint="몸무게를 입력하세요."
 
                 android:textSize="15dp"
 
-                android:inputType="textPassword"/>
+                android:inputType="number"/>
 
 
 

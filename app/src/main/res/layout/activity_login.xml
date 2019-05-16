@@ -99,7 +99,7 @@
 
             android:layout_height="wrap_content"
 
-            android:inputType="textPassword"
+            android:inputType="number"
 
             android:hint="PassWord"
 
