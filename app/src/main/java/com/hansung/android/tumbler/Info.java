@@ -110,8 +110,6 @@ public class Info extends AppCompatActivity {
 
                         "pass text," +
 
-                        "passCheck text," +
-
                         "num text," +
 
                         "major text" +

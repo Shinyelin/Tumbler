@@ -27,9 +27,9 @@ import android.widget.Toast;
 
 public class Member extends Info {
 
-    EditText NAME,PASS,PASSSIGN,NUM,MAJOR;
+    EditText NAME,PASS,NUM,MAJOR;
 
-    String Tname, Tpass, Tpasssign,Tnum,Tmajor;
+    String Tname, Tpass, Tnum,Tmajor;
 
 
 
@@ -47,7 +47,6 @@ public class Member extends Info {
 
         PASS = (EditText) findViewById(R.id.password);
 
-        PASSSIGN = (EditText) findViewById(R.id.passsign);
 
         NUM = (EditText) findViewById(R.id.num);
 
@@ -70,8 +69,6 @@ public class Member extends Info {
                 Tname = NAME.getText().toString();
 
                 Tpass = PASS.getText().toString();
-
-                Tpasssign = PASSSIGN.getText().toString();
 
                 Tnum = NUM.getText().toString();
 
@@ -111,13 +108,7 @@ public class Member extends Info {
 
                             Toast.LENGTH_SHORT).show();
 
-                } else if (Tpasssign.length() <6) {
-
-                    Toast.makeText(getApplicationContext(), "비밀번호를 입력하세요.",
-
-                            Toast.LENGTH_SHORT).show();
-
-                } else if (Tnum.length() >10 || Tname.equals(Cnum)) {
+                }  else if (Tnum.length() >10 || Tname.equals(Cnum)) {
 
                     Toast.makeText(getApplicationContext(), "이미 등록된 학번이거나 정확하지 않습니다."+Tnum.length()+""+Tname+""+Cnum,
 
@@ -135,9 +126,9 @@ public class Member extends Info {
 
                         if (database != null) {
 
-                            database.execSQL("INSERT INTO " + tableName + "(name, pass, passCheck, num, major) VALUES" +
+                            database.execSQL("INSERT INTO " + tableName + "(name, pass,  num, major) VALUES" +
 
-                                    "(" + "'" + Tname + "'" + "," + "'" + Tpass + "'" + "," + "'" + Tpasssign + "'" + "," +  "'" + Tnum + "'" +  "," + "'" + Tmajor + "'" + ")");
+                                    "(" + "'" + Tname + "'" + "," + "'" + Tpass + "'" + "," +  "'" + Tnum + "'" +  "," + "'" + Tmajor + "'" + ")");
 
                         }
 
@@ -154,11 +145,12 @@ public class Member extends Info {
 
                     login.putExtra("splash", "splash");
 
+
                     startActivity(login);
 
                     finish();
 
-                    Toast.makeText(getApplication(), Tname + "님 회원가입을 축하합니다.", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplication(), Tname + Tnum +Tpass+"님 회원가입을 축하합니다.", Toast.LENGTH_LONG).show();
 
 
 
