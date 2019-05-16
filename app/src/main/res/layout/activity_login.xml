@@ -35,15 +35,17 @@
         android:layout_marginBottom="25dp">
 
 
+
+
         <ImageView
 
-            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
 
-            android:layout_width="130dp"
+            android:layout_height="wrap_content"
 
-            android:layout_height="130dp"
+            android:src="@drawable/logo"
 
-            android:src="@drawable/logo" />
+            android:id="@+id/imageView" />
 
     </LinearLayout>
 
@@ -72,7 +74,7 @@
 
             android:textSize="20dp"
 
-            android:inputType="number"/>
+            android:inputType="text"/>
 
     </LinearLayout>
 
@@ -123,31 +125,29 @@
 
             android:layout_width="150dp"
 
-            android:layout_height="40dp"
+            android:layout_height="80dp"
 
-            android:background="#ededed"
+            android:background="#FFCFCF"
+
 
             android:onClick="login"
 
+            android:padding="15dp"
 
 
             android:text="Login"
-            android:textColor="#DD000000" />
+            android:textColor="#000000" />
 
     </LinearLayout>
 
 
-
-
     <LinearLayout
-
-        android:paddingTop="15dp"
-
-        android:gravity="center"
 
         android:layout_width="match_parent"
 
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+
+        android:gravity="center">
 
 
         <Button
@@ -156,55 +156,22 @@
 
             android:layout_width="150dp"
 
-            android:layout_height="40dp"
+            android:layout_height="80dp"
 
-            android:background="#ededed"
+            android:background="#FFCFCF"
 
 
             android:onClick="member"
 
+            android:padding="15dp"
+
 
             android:text="Member"
-
-            />
-
-
-
-
-
-
-
-    </LinearLayout>
-
-    <LinearLayout
-
-        android:layout_gravity="bottom"
-
-        android:layout_width="match_parent"
-
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
-        <ImageView
-
-
-            android:id="@+id/bottomlogo"
-
-            android:layout_width="280dp"
-
-            android:layout_height="280dp"
-
-            android:padding="0sp"
-
-
-            android:src="@drawable/botm" />
-
-
-
-
-
+            android:textColor="#000000" />
 
 
     </LinearLayout>
 
 </LinearLayout>
+
+

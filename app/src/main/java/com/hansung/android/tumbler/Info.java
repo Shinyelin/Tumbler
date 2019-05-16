@@ -1,16 +1,28 @@
 package com.hansung.android.tumbler;
 
 
+
+
 import android.content.Context;
+
 import android.database.sqlite.SQLiteDatabase;
+
 import android.database.sqlite.SQLiteOpenHelper;
+
 import android.os.Bundle;
+
+
+
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 
+
+
 /**
+
  * Created by 박성균 on 2015-05-30.
+
  */
 
 public class Info extends AppCompatActivity {
@@ -173,3 +185,5 @@ public class Info extends AppCompatActivity {
 
 
 }
+
+

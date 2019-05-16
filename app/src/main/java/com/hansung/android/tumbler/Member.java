@@ -1,18 +1,28 @@
 package com.hansung.android.tumbler;
 
 
+
 import android.content.Intent;
+
 import android.database.Cursor;
+
 import android.os.Bundle;
+
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.EditText;
+
 import android.widget.ImageButton;
+
 import android.widget.Toast;
 
 
+
+
 /**
+
  * Created by 박성균 on 2015-04-11.
+
  */
 
 public class Member extends Info {
@@ -49,7 +59,7 @@ public class Member extends Info {
 
 
 
-        Button join = (Button) findViewById(R.id.join);
+        ImageButton join = (ImageButton) findViewById(R.id.join);
 
         join.setOnClickListener(new View.OnClickListener() {
 
@@ -107,13 +117,13 @@ public class Member extends Info {
 
                             Toast.LENGTH_SHORT).show();
 
-                } else if (Tnum.length() <1 || Tname.equals(Cnum)) {
+                } else if (Tnum.length() >10 || Tname.equals(Cnum)) {
 
-                    Toast.makeText(getApplicationContext(), "이미 등록된 성별이거나 정확하지 않습니다."+Tnum.length()+""+Tname+""+Cnum,
+                    Toast.makeText(getApplicationContext(), "이미 등록된 학번이거나 정확하지 않습니다."+Tnum.length()+""+Tname+""+Cnum,
 
                             Toast.LENGTH_SHORT).show();
 
-                } else if (Tmajor.length() <1) {
+                } else if (Tmajor.length() <3) {
 
                     Toast.makeText(getApplicationContext(), "학과이름을 정확히 입력해주세요.",
 
@@ -127,7 +137,7 @@ public class Member extends Info {
 
                             database.execSQL("INSERT INTO " + tableName + "(name, pass, passCheck, num, major) VALUES" +
 
-                                    "(" + "'" + Tname + "'" + "," + "'" + Tpass + "'" + "," + "'" + Tpasssign + "'" + "," + Tnum + "," + "'" + Tmajor + "'" + ")");
+                                    "(" + "'" + Tname + "'" + "," + "'" + Tpass + "'" + "," + "'" + Tpasssign + "'" + "," +  "'" + Tnum + "'" +  "," + "'" + Tmajor + "'" + ")");
 
                         }
 
@@ -169,3 +179,5 @@ public class Member extends Info {
 
 
 }
+
+
