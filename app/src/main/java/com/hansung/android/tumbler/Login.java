@@ -72,9 +72,9 @@ public class Login extends Info {
 
                 Cname = cursor.getString(0);
 
-                Cnum = cursor.getString(1);
+                Cheight = cursor.getString(1);
 
-                Cpass = cursor.getString(2);
+                Cage = cursor.getString(2);
 
             }
 
@@ -82,7 +82,7 @@ public class Login extends Info {
 
             Pass = passText.getText().toString();
 
-            if (Id.equals(Cnum) && Pass.equals(Cpass)) {
+            if (Id.equals(Cname) && Pass.equals(Cage)) {
 
                 Intent main = new Intent(getApplication(), MainActivity.class);
 

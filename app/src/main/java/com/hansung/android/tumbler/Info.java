@@ -35,13 +35,13 @@ public class Info extends AppCompatActivity {
 
     String databaseName = "memberJoin";
 
-    String Cnum;
+    String Cheight;
 
-    String Cpass;
+    String Cage;
 
     String Cname;
 
-    String Cmajor;
+    String Cweight;
 
 
 

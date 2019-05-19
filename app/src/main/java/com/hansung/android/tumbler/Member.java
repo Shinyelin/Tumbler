@@ -1,7 +1,6 @@
 package com.hansung.android.tumbler;
 
 
-
 import android.content.Intent;
 
 import android.database.Cursor;
@@ -17,21 +16,15 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 
-
-
 /**
-
  * Created by 박성균 on 2015-04-11.
-
  */
 
 public class Member extends Info {
 
-    EditText NAME,PASS,NUM,MAJOR;
+    EditText NAME, AGE, HEIGHT, WEIGHT;
 
-    String Tname, Tpass, Tnum,Tmajor;
-
-
+    String Tname, Tpass, Tnum, Tweight;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,23 +32,15 @@ public class Member extends Info {
         super.onCreate(savedInstanceState);
 
 
-
-
         setContentView(R.layout.activity_member);
 
         NAME = (EditText) findViewById(R.id.name);
 
-        PASS = (EditText) findViewById(R.id.password);
+        AGE = (EditText) findViewById(R.id.age);
 
+        HEIGHT = (EditText) findViewById(R.id.height);
 
-        NUM = (EditText) findViewById(R.id.num);
-
-        MAJOR = (EditText) findViewById(R.id.major);
-
-
-
-
-
+        WEIGHT = (EditText) findViewById(R.id.weight);
 
 
         ImageButton join = (ImageButton) findViewById(R.id.join);
@@ -68,71 +53,71 @@ public class Member extends Info {
 
                 Tname = NAME.getText().toString();
 
-                Tpass = PASS.getText().toString();
+                Tpass = AGE.getText().toString();   //나이
 
-                Tnum = NUM.getText().toString();
+                Tnum = HEIGHT.getText().toString();     //키
 
-                Tmajor = MAJOR.getText().toString();
+                Tweight = WEIGHT.getText().toString();
 
                 Cursor cursor = database.rawQuery("SELECT name, num, major FROM " + tableName, null);
 
                 int count = cursor.getCount();
 
-                for(int i=0;i<count;i++) {
+                for (int i = 0; i < count; i++) {
 
                     cursor.moveToNext();
 
 
-
-
                     Cname = cursor.getString(0);
 
-                    Cnum = cursor.getString(1);
+                    Cheight = cursor.getString(1);
 
-                    Cmajor = cursor.getString(2);
-
-
+                    Cweight = cursor.getString(2);
 
 
                 }
 
-                if (Tname.length()<2) {
+                if (Tname.length() < 1) {
 
                     Toast.makeText(getApplicationContext(), "이름을 정확하게 입력해주세요.",
 
                             Toast.LENGTH_SHORT).show();
 
-                } else if (Tpass.length() <6) {
+                } else if (Tpass.length() < 1) {
 
-                    Toast.makeText(getApplicationContext(), "비밀번호를 6자리 이상 입력하세요.",
-
-                            Toast.LENGTH_SHORT).show();
-
-                }  else if (Tnum.length() >10 || Tname.equals(Cnum)) {
-
-                    Toast.makeText(getApplicationContext(), "이미 등록된 학번이거나 정확하지 않습니다."+Tnum.length()+""+Tname+""+Cnum,
+                    Toast.makeText(getApplicationContext(), "나이를 정확하게 입력해주세요.",
 
                             Toast.LENGTH_SHORT).show();
 
-                } else if (Tmajor.length() <3) {
+                } else if (Tname.equals(Cname)) {
 
-                    Toast.makeText(getApplicationContext(), "학과이름을 정확히 입력해주세요.",
+                    Toast.makeText(getApplicationContext(), "이미 등록된 이름입니다." + Tnum.length() + "" + Tname + "" + Cname,
+
+                            Toast.LENGTH_SHORT).show();
+
+                } else if (Tnum.length() < 2) {
+
+                    Toast.makeText(getApplicationContext(), "키를 정확히 입력해주세요.",
+
+                            Toast.LENGTH_SHORT).show();
+
+                } else if (Tweight.length() < 2) {
+
+                    Toast.makeText(getApplicationContext(), "몸무게를 정확히 입력해주세요.",
 
                             Toast.LENGTH_SHORT).show();
 
                 } else {
 
-                    try{
+                    try {
 
                         if (database != null) {
 
                             database.execSQL("INSERT INTO " + tableName + "(name, pass,  num, major) VALUES" +
 
-                                    "(" + "'" + Tname + "'" + "," + "'" + Tpass + "'" + "," +  "'" + Tnum + "'" +  "," + "'" + Tmajor + "'" + ")");
+                                    "(" + "'" + Tname + "'" + "," + "'" + Tpass + "'" + "," + "'" + Tnum + "'" + "," + "'" + Tweight + "'" + ")");
 
                         }
-
-
 
 
                     } catch (Exception e) {
@@ -153,21 +138,13 @@ public class Member extends Info {
                     //Toast.makeText(getApplication(), Tname + Tnum +Tpass+"님 회원가입을 축하합니다.", Toast.LENGTH_LONG).show();
 
 
-
-
-
-
-
                 }
 
 
-
-
-            } });
+            }
+        });
 
     }
-
-
 
 
 }
