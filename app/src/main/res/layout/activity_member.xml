@@ -13,25 +13,43 @@
     <LinearLayout
 
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp">
 
-        android:layout_height="wrap_content">
-
-        <ImageView
-
+        <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
-
-            android:layout_height="170dp"
-
-            android:src="@drawable/logo"/>
-
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Welcome to liter \n Please with as a member." />
     </LinearLayout>
 
     <TableLayout
 
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
 
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
 
+        <TableRow
+
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <TextView
+
+                android:layout_height="100dp"
+
+                android:gravity="center"
+
+                android:text="MAKING PROFILE"
+
+                android:textSize="20dp" />
+
+
+        </TableRow>
 
 
 
@@ -41,18 +59,16 @@
 
             <TextView
 
+
                 android:text="NAME"
-
-                android:textSize="20dp"
-
-                />
+                android:textSize="20dp" />
 
             <EditText
 
                 android:id="@+id/name"
 
+                android:layout_width="150dp"
                 android:inputType="text"
-
                 android:textSize="15dp" />
 
         </TableRow>
@@ -64,22 +80,19 @@
             <TextView
 
                 android:text="AGE"
-
                 android:textSize="20dp" />
 
             <EditText
 
                 android:id="@+id/age"
 
-                android:inputType="number"
+                android:layout_width="150dp"
 
+                android:inputType="number"
                 android:textSize="15dp" />
 
 
-
-
         </TableRow>
-
 
 
         <TableRow
@@ -89,39 +102,62 @@
             <TextView
 
                 android:text="HEIGHT"
-
                 android:textSize="20dp" />
 
             <EditText
 
                 android:id="@+id/height"
 
+                android:layout_width="150dp"
+
                 android:inputType="number"
-
                 android:textSize="15dp" />
-
-
 
 
         </TableRow>
 
         <TableRow
 
-            android:gravity="center_horizontal">
+        android:gravity="center_horizontal">
 
             <TextView
 
                 android:text="WEIGHT"
-
                 android:textSize="20dp" />
 
             <EditText
 
                 android:id="@+id/weight"
 
-                android:inputType="text"
+                android:layout_width="150dp"
 
+                android:inputType="text"
                 android:textSize="15dp" />
+
+
+    </TableRow>
+
+        <TableRow
+
+            android:gravity="center_horizontal">
+
+            <Button
+
+                android:id="@+id/join"
+
+                android:layout_height="wrap_content"
+
+                android:background="@color/colorPrimary"
+
+                android:onClick="join"
+
+                android:padding="0sp"
+
+                android:scaleType="centerCrop"
+
+                android:text="NEXT STEP"
+
+                android:textColor="#FFFFFF" />
 
 
 
@@ -138,21 +174,7 @@
 
         android:layout_height="wrap_content">
 
-        <ImageButton
 
-            android:id="@+id/join"
-
-            android:onClick="join"
-
-            android:layout_width="wrap_content"
-
-            android:layout_height="wrap_content"
-
-            android:src="@drawable/member"
-
-            android:scaleType="centerCrop"
-
-            android:padding="0sp"/>
 
     </LinearLayout>
 
@@ -166,26 +188,16 @@
 
         android:layout_height="wrap_content"
 
-        android:layout_gravity="center_horizontal">
+        android:layout_gravity="center_horizontal"
 
-        <ImageView
+        android:layout_marginTop="80dp">
 
-
-
-
-            android:id="@+id/botm"
-
-            android:src="@drawable/botm"
-
+        <TextView
+            android:id="@+id/textView"
+            android:gravity="center"
             android:layout_width="match_parent"
-
             android:layout_height="wrap_content"
-
-            android:scaleType="centerCrop"
-
-            android:padding="0sp"/>
-
-
+            android:text="By clicking 'Sign Up' you agree to the Terms of \n Use and Policy" />
 
 
     </LinearLayout>

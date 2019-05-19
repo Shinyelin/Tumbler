@@ -9,6 +9,7 @@ import android.os.Bundle;
 
 import android.view.View;
 
+import android.widget.Button;
 import android.widget.EditText;
 
 import android.widget.ImageButton;
@@ -43,7 +44,7 @@ public class Member extends Info {
         WEIGHT = (EditText) findViewById(R.id.weight);
 
 
-        ImageButton join = (ImageButton) findViewById(R.id.join);
+        Button join = (Button) findViewById(R.id.join);
 
         join.setOnClickListener(new View.OnClickListener() {
 
