@@ -134,9 +134,9 @@ public class Member extends Info {
 
                     startActivity(login);
 
-                    finish();
+                   finish();
 
-                    //Toast.makeText(getApplication(), Tname + Tnum +Tpass+"님 회원가입을 축하합니다.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplication(), Tname +"님 회원가입을 축하합니다.", Toast.LENGTH_LONG).show();
 
 
                 }
