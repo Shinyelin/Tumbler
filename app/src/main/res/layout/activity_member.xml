@@ -14,7 +14,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp">
+        android:layout_marginTop="100dp">
 
         <TextView
             android:id="@+id/textView2"
@@ -28,10 +28,10 @@
     <TableLayout
 
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        >
+
+    >
 
         <TableRow
 
@@ -52,7 +52,6 @@
         </TableRow>
 
 
-
         <TableRow
 
             android:gravity="center_horizontal">
@@ -67,7 +66,6 @@
 
                 android:id="@+id/name"
 
-                android:layout_width="150dp"
                 android:inputType="text"
                 android:textSize="15dp" />
 
@@ -85,8 +83,6 @@
             <EditText
 
                 android:id="@+id/age"
-
-                android:layout_width="150dp"
 
                 android:inputType="number"
                 android:textSize="15dp" />
@@ -108,8 +104,6 @@
 
                 android:id="@+id/height"
 
-                android:layout_width="150dp"
-
                 android:inputType="number"
                 android:textSize="15dp" />
 
@@ -118,7 +112,7 @@
 
         <TableRow
 
-        android:gravity="center_horizontal">
+            android:gravity="center_horizontal">
 
             <TextView
 
@@ -135,15 +129,18 @@
                 android:textSize="15dp" />
 
 
-    </TableRow>
+        </TableRow>
 
         <TableRow
 
+            android:layout_width="match_parent"
             android:gravity="center_horizontal">
 
             <Button
 
                 android:id="@+id/join"
+
+                android:layout_width="match_parent"
 
                 android:layout_height="wrap_content"
 
@@ -156,10 +153,7 @@
                 android:scaleType="centerCrop"
 
                 android:text="NEXT STEP"
-
                 android:textColor="#FFFFFF" />
-
-
 
 
         </TableRow>
