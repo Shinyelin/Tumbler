@@ -46,6 +46,9 @@ public class Info extends AppCompatActivity {
 
 
 
+
+
+
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,6 +116,7 @@ public class Info extends AppCompatActivity {
                         "num text," +
 
                         "major text" +
+
 
                         ")");
 

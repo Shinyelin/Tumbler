@@ -127,7 +127,7 @@ public class Member extends Info {
 
                     }
 
-                    Intent login = new Intent(getApplication(), MainActivity.class);
+                    Intent login = new Intent(getApplication(), Character.class);
 
                     login.putExtra("splash", "splash");
 
