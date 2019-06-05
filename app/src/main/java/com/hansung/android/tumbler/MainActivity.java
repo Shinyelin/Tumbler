@@ -16,28 +16,6 @@ public class MainActivity extends AppCompatActivity {
     private Menu1Fragment menu1Fragment = new Menu1Fragment();
     private Menu2Fragment menu2Fragment = new Menu2Fragment();
     private Menu3Fragment menu3Fragment = new Menu3Fragment();
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            FragmentTransaction transaction = fragmentManager.beginTransaction();
-            switch (item.getItemId()) {
-                case R.id.navigation_home: {
-                    transaction.replace(R.id.frame_layout, menu1Fragment).commitAllowingStateLoss();
-                    break;
-                }
-                case R.id.navigation_dashboard:{
-                    transaction.replace(R.id.frame_layout, menu2Fragment).commitAllowingStateLoss();
-                    break;
-                }
-                case R.id.navigation_notifications:
-                    transaction.replace(R.id.frame_layout, menu3Fragment).commitAllowingStateLoss();
-                    break;
-            }
-            return false;
-        }
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +25,33 @@ public class MainActivity extends AppCompatActivity {
         mTextMessage = findViewById(R.id.message);
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.frame_layout, menu1Fragment).commitAllowingStateLoss();
-        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                switch (item.getItemId()) {
+                    case R.id.navigation_home: {
+                        transaction.replace(R.id.frame_layout, menu1Fragment).commitAllowingStateLoss();
+                        break;
+                    }
+                    case R.id.navigation_dashboard:{
+                        transaction.replace(R.id.frame_layout, menu2Fragment).commitAllowingStateLoss();
+                        break;
+                    }
+                    case R.id.navigation_notifications:
+                        transaction.replace(R.id.frame_layout, menu3Fragment).commitAllowingStateLoss();
+                        break;
+                }
+
+
+
+
+                return false;
+            }
+        });
+
+
     }
 
 }
