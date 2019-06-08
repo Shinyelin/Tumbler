@@ -60,7 +60,7 @@ public class Member extends Info {
 
                 Tweight = WEIGHT.getText().toString();
 
-                Cursor cursor = database.rawQuery("SELECT name, num, major FROM " + tableName, null);
+                Cursor cursor = database.rawQuery("SELECT name, num, major, water FROM " + tableName, null);
 
                 int count = cursor.getCount();
 
@@ -74,6 +74,8 @@ public class Member extends Info {
                     Cheight = cursor.getString(1);
 
                     Cweight = cursor.getString(2);
+
+                    Cwater = cursor.getString(3);  //물마신 값넣는 필드에서 값가져옴
 
 
                 }
@@ -114,9 +116,9 @@ public class Member extends Info {
 
                         if (database != null) {
 
-                            database.execSQL("INSERT INTO " + tableName + "(name, pass,  num, major) VALUES" +
+                            database.execSQL("INSERT INTO " + tableName + "(name, pass,  num, major, water) VALUES" +
 
-                                    "(" + "'" + Tname + "'" + "," + "'" + Tpass + "'" + "," + "'" + Tnum + "'" + "," + "'" + Tweight + "'" + ")");
+                                    "(" + "'" + Tname + "'" + "," + "'" + Tpass + "'" + "," + "'" + Tnum + "'" + "," + "'" + Tweight  + "'" + "," + ""+ ")");
 
                         }
 
@@ -135,8 +137,9 @@ public class Member extends Info {
                     startActivity(login);
 
                    finish();
+                    Toast.makeText(getApplication(), Cwater +"님 회원가입을 축하합니다.", Toast.LENGTH_LONG).show();
 
-                    Toast.makeText(getApplication(), Tname +"님 회원가입을 축하합니다.", Toast.LENGTH_LONG).show();
+
 
 
                 }

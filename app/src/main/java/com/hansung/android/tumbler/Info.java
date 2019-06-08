@@ -33,7 +33,7 @@ public class Info extends AppCompatActivity {
 
     String tableName = "PRODUCT";
 
-    String databaseName = "memberJoin";
+    String databaseName = "memberJoin1";
 
     String Cheight;
 
@@ -42,6 +42,8 @@ public class Info extends AppCompatActivity {
     String Cname;
 
     String Cweight;
+
+    String Cwater;
 
 
 
@@ -55,7 +57,7 @@ public class Info extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_member);
 
 
 
@@ -115,7 +117,9 @@ public class Info extends AppCompatActivity {
 
                         "num text," +
 
-                        "major text" +
+                        "major text," +
+
+                        "water text"+
 
 
                         ")");
