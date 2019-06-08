@@ -1,16 +1,24 @@
 package com.hansung.android.tumbler;
 
+import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.annotation.NonNull;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private TextView mTextMessage;
+    @Nullable
+    private View imgview;
+    private ImageView img;
     private FragmentManager fragmentManager = getSupportFragmentManager();
     // 4개의 메뉴에 들어갈 Fragment들
     private Menu1Fragment menu1Fragment = new Menu1Fragment();
@@ -23,8 +31,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
         mTextMessage = findViewById(R.id.message);
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.frame_layout, menu1Fragment).commitAllowingStateLoss();
+
+        imgview = (View) findViewById(R.id.view_transition_drawable);
+        imgview.post(new Runnable(){
+            @Override
+            public void run(){
+                ((AnimationDrawable) imgview.getBackground()).start();
+            }
+        });
+
+        img = (ImageView) findViewById(R.id.img);
+        img.post(new Runnable(){
+            @Override
+            public void run(){
+                ((AnimationDrawable) img.getBackground()).start();
+            }
+        });
+
+
+       // FragmentTransaction transaction = fragmentManager.beginTransaction();
+       // transaction.replace(R.id.frame_layout, menu1Fragment).commitAllowingStateLoss();
 
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

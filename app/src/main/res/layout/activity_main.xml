@@ -8,11 +8,27 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/view_transition_drawable"
+        android:background="@drawable/animation"
+       />
+
+
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="?attr/actionBarSize"/>
+        android:layout_marginBottom="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_gravity="bottom|center"
+            android:background="@drawable/animation1" />
+    </FrameLayout>
 
 
 

@@ -4,17 +4,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:drawable="@drawable/main1"
-        android:duration="1000"/>
+        android:duration="20000"/>
     <item
         android:drawable="@drawable/main2"
-        android:duration="1000"/>
+        android:duration="20000"/>
     <item
         android:drawable="@drawable/main3"
-        android:duration="1000"/>
+        android:duration="20000"/>
 
     <item
         android:drawable="@drawable/main4"
-        android:duration="1000"/>
-
+        android:duration="20000"/>
+    <item
+        android:drawable="@drawable/main5"
+        android:duration="20000"/>
 
 </animation-list>
