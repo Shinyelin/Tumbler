@@ -16,11 +16,11 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private TextView mTextMessage;
-    @Nullable
-    private View imgview;
-    private ImageView img;
+
     private FragmentManager fragmentManager = getSupportFragmentManager();
     // 4개의 메뉴에 들어갈 Fragment들
+    private Menu0Fragment menu0Fragment = new Menu0Fragment();
+
     private Menu1Fragment menu1Fragment = new Menu1Fragment();
     private Menu2Fragment menu2Fragment = new Menu2Fragment();
     private Menu3Fragment menu3Fragment = new Menu3Fragment();
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
         mTextMessage = findViewById(R.id.message);
-
+/*
         imgview = (View) findViewById(R.id.view_transition_drawable);
         imgview.post(new Runnable(){
             @Override
@@ -46,11 +46,11 @@ public class MainActivity extends AppCompatActivity {
             public void run(){
                 ((AnimationDrawable) img.getBackground()).start();
             }
-        });
+        });*/
 
 
-       // FragmentTransaction transaction = fragmentManager.beginTransaction();
-       // transaction.replace(R.id.frame_layout, menu1Fragment).commitAllowingStateLoss();
+       FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.frame_layout, menu0Fragment).commitAllowingStateLoss();
 
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

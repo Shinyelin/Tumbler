@@ -5,10 +5,10 @@
 
     <item
         android:drawable="@drawable/walk2"
-        android:duration="1000"/>
+        android:duration="500"/>
     <item
         android:drawable="@drawable/walk3"
-        android:duration="1000"/>
+        android:duration="500"/>
 
 
 </animation-list>
