@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.annotation.NonNull;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         });*/
 
 
-       FragmentTransaction transaction = fragmentManager.beginTransaction();
+       final FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.frame_layout, menu0Fragment).commitAllowingStateLoss();
 
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -78,6 +79,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
+
     }
+
 
 }

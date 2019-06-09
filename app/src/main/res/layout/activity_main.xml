@@ -22,12 +22,15 @@
 
 
 
+
+
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
-        app:menu="@menu/bottom_nav_menu" />
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="#CACACA"/>
 
 </android.support.design.widget.CoordinatorLayout>

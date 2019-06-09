@@ -25,7 +25,7 @@ public class Member extends Info {
 
     EditText NAME, AGE, HEIGHT, WEIGHT;
 
-    String Tname, Tpass, Tnum, Tweight;
+    static String Tname, Tpass, Tnum, Tweight;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +60,7 @@ public class Member extends Info {
 
                 Tweight = WEIGHT.getText().toString();
 
-                Cursor cursor = database.rawQuery("SELECT name, num, major, water FROM " + tableName, null);
+                Cursor cursor = database.rawQuery("SELECT name, num, major, character, water FROM " + tableName, null);
 
                 int count = cursor.getCount();
 
@@ -75,7 +75,9 @@ public class Member extends Info {
 
                     Cweight = cursor.getString(2);
 
-                    Cwater = cursor.getString(3);  //물마신 값넣는 필드에서 값가져옴
+                    Ccharacter = cursor.getString(3);  //물마신 값넣는 필드에서 값가져옴
+
+                    Cwater = cursor.getString(4);  //물마신 값넣는 필드에서 값가져옴
 
 
                 }
@@ -116,9 +118,10 @@ public class Member extends Info {
 
                         if (database != null) {
 
-                            database.execSQL("INSERT INTO " + tableName + "(name, pass,  num, major, water) VALUES" +
+                            database.execSQL("INSERT INTO " + tableName + "(name, pass,  num, major, character,water) VALUES" +
 
-                                    "(" + "'" + Tname + "'" + "," + "'" + Tpass + "'" + "," + "'" + Tnum + "'" + "," + "'" + Tweight  + "'" + "," + ""+ ")");
+                                    "(" + "'" + Tname + "'" + "," + "'" + Tpass + "'" + "," + "'" + Tnum + "'" + "," +
+                                    "'" + Tweight  + "'" + "," + "'" +""+"'" +","+"'" +""+"'" + ")");
 
                         }
 
@@ -137,7 +140,7 @@ public class Member extends Info {
                     startActivity(login);
 
                    finish();
-                    Toast.makeText(getApplication(), Cwater +"님 회원가입을 축하합니다.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplication(), Cwater +"/"+Ccharacter+"님 회원가입을 축하합니다.", Toast.LENGTH_LONG).show();
 
 
 

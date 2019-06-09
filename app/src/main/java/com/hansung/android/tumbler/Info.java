@@ -33,7 +33,7 @@ public class Info extends AppCompatActivity {
 
     String tableName = "PRODUCT";
 
-    String databaseName = "memberJoin1";
+    String databaseName = "memberJoin2";
 
     String Cheight;
 
@@ -42,6 +42,8 @@ public class Info extends AppCompatActivity {
     String Cname;
 
     String Cweight;
+
+    String Ccharacter;
 
     String Cwater;
 
@@ -118,6 +120,8 @@ public class Info extends AppCompatActivity {
                         "num text," +
 
                         "major text," +
+
+                        "character text," +
 
                         "water text"+
 
