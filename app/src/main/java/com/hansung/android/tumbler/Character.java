@@ -52,6 +52,9 @@ public class Character extends Info {
                     Cwater = cursor.getString(4);  //물마신 값넣는 필드에서 값가져옴
 
 
+
+                    // Cwater 이라는 코드에 물 마신 값을 넣어줍니다.
+
                 }
 
 

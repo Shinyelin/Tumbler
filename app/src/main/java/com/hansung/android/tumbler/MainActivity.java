@@ -21,11 +21,10 @@ public class MainActivity extends AppCompatActivity {
     private FragmentManager fragmentManager = getSupportFragmentManager();
     // 4개의 메뉴에 들어갈 Fragment들
     private Menu0Fragment menu0Fragment = new Menu0Fragment();
-
     private Menu1Fragment menu1Fragment = new Menu1Fragment();
     private Menu2Fragment menu2Fragment = new Menu2Fragment();
     private Menu3Fragment menu3Fragment = new Menu3Fragment();
-
+    private Menu4Fragment menu4Fragment = new Menu4Fragment();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,10 +52,14 @@ public class MainActivity extends AppCompatActivity {
        final FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.frame_layout, menu0Fragment).commitAllowingStateLoss();
 
+
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+
                 switch (item.getItemId()) {
                     case R.id.navigation_home: {
                         transaction.replace(R.id.frame_layout, menu1Fragment).commitAllowingStateLoss();
@@ -84,4 +87,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void switchFragment(int id) {   //프래그먼트 교체 메서드
+        final FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+//        fragmentTransaction.replace(R.id.frame_layout, menu0Fragment).commitAllowingStateLoss();
+        if (id == 0)
+            fragmentTransaction.replace(R.id.frame_layout, menu0Fragment);
+
+    }
+    public void ch_menu0Fragment() {   //프래그먼트 교체 메서드
+        final FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.frame_layout, menu0Fragment).commitAllowingStateLoss();
+    }
+    public void ch_menu4Fragment() {   //프래그먼트 교체 메서드
+        final FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.frame_layout, menu4Fragment).commitAllowingStateLoss();
+    }
 }

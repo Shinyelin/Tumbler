@@ -36,11 +36,6 @@ public class Menu0Fragment extends Fragment {
                 ((AnimationDrawable) img.getBackground()).start();
             }
         });
-
-
-
-
-
         return rootView;
 
     }
